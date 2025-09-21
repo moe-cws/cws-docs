@@ -66,17 +66,21 @@ plugins:
   - mermaid2:
       arguments:
         theme: |
-          ^(JSON.parse(__md_get("__palette").index == 1)) ? 'dark' : 'light'
+          ^(JSON.parse(__md_get("__palette").index == 1)) ? 'dark' : 'dark'
         themeVariables:
           primaryColor: '#673AB7'
           primaryTextColor: '#FFFFFF'
           primaryBorderColor: '#009688'
           lineColor: '#009688'
-          sectionBkColor: '#F5F5F5'
-          altSectionBkColor: '#E1F5FE'
-          gridColor: '#CCCCCC'
+          sectionBkColor: '#1A1A1F'
+          altSectionBkColor: '#2C2C34'
+          gridColor: '#009688'
           secondaryColor: '#009688'
           tertiaryColor: '#FFD700'
+          background: '#1A1A1F'
+          mainBkg: '#673AB7'
+          secondBkg: '#009688'
+          tertiaryBkg: '#4A1458'
 
 # Extensions
 markdown_extensions:

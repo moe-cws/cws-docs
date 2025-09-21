@@ -7,8 +7,13 @@
   --qatar-gold: #FFD700;
   --qatar-teal: #009688;
   --qatar-deep-purple: #673AB7;
-  --qatar-light-gray: #F5F5F5;
-  --qatar-dark-gray: #424242;
+  --qatar-light-gray: #2C2C34;
+  --qatar-dark-gray: #1A1A1F;
+  --qatar-medium-gray: #3A3A42;
+  --qatar-accent-dark: #4A1458;
+  --qatar-teal-dark: #00695C;
+  --qatar-purple-light: rgba(103, 58, 183, 0.1);
+  --qatar-teal-light: rgba(0, 150, 136, 0.1);
 }
 
 /* Custom header styling */
@@ -22,18 +27,21 @@
   padding: 2rem 0;
   border-bottom: 3px solid var(--qatar-teal);
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, var(--qatar-light-gray) 0%, #FAFAFA 100%);
+  background: linear-gradient(135deg, var(--qatar-dark-gray) 0%, var(--qatar-medium-gray) 100%);
   border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
 }
 
 .prd-header h1 {
-  color: var(--qatar-deep-purple);
+  color: var(--qatar-white);
   margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .prd-header h2 {
-  color: var(--qatar-dark-gray);
+  color: var(--qatar-teal);
   font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .document-meta {
@@ -76,25 +84,30 @@
 }
 
 .md-typeset table:not([class]) tr:nth-child(even) {
-  background-color: rgba(103, 58, 183, 0.05);
+  background-color: var(--qatar-purple-light);
+}
+
+.md-typeset table:not([class]) tr:nth-child(odd) {
+  background-color: var(--qatar-teal-light);
 }
 
 /* Mermaid diagram styling */
 .mermaid {
   text-align: center;
   margin: 2rem 0;
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: var(--qatar-dark-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
   border: 2px solid var(--qatar-teal);
   overflow-x: auto;
 }
 
 /* Dark mode mermaid adjustments */
 [data-md-color-scheme="slate"] .mermaid {
-  background: #2E2E2E;
+  background: var(--qatar-light-gray);
   border-color: var(--qatar-teal);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
 }
 
 /* Ensure mermaid diagrams are responsive */
@@ -152,22 +165,25 @@
   margin-top: 3rem;
   padding: 2rem 0;
   border-top: 2px solid var(--qatar-teal);
-  background: var(--qatar-light-gray);
-  border-radius: 8px;
+  background: var(--qatar-dark-gray);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 
 .document-info {
-  background: white;
+  background: var(--qatar-medium-gray);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  color: var(--qatar-white);
 }
 
 .approval-section h3 {
-  color: var(--qatar-deep-purple);
+  color: var(--qatar-teal);
   border-bottom: 2px solid var(--qatar-teal);
   padding-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .approval-grid {
@@ -180,15 +196,17 @@
 .approval-item {
   padding: 1.5rem;
   border: 2px solid var(--qatar-teal);
-  border-radius: 8px;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  background: var(--qatar-medium-gray);
+  color: var(--qatar-white);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
 }
 
 .approval-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  border-color: var(--qatar-gold);
 }
 
 /* Navigation enhancements */
@@ -265,17 +283,28 @@
 
 /* Dark mode adjustments */
 [data-md-color-scheme="slate"] {
-  --qatar-light-gray: #2E2E2E;
-  --qatar-white: #1E1E1E;
+  --qatar-light-gray: #1C1C24;
+  --qatar-dark-gray: #0F0F14;
+  --qatar-medium-gray: #26262E;
 }
 
 [data-md-color-scheme="slate"] .prd-header {
-  background: linear-gradient(135deg, #2E2E2E 0%, #333333 100%);
+  background: linear-gradient(135deg, var(--qatar-dark-gray) 0%, var(--qatar-medium-gray) 100%);
   color: white;
 }
 
-[data-md-color-scheme="slate"] .document-info,
+[data-md-color-scheme="slate"] .document-info {
+  background: var(--qatar-light-gray);
+  border: 1px solid var(--qatar-teal);
+  color: var(--qatar-white);
+}
+
 [data-md-color-scheme="slate"] .approval-item {
-  background: #2E2E2E;
+  background: var(--qatar-light-gray);
   border-color: var(--qatar-teal);
+  color: var(--qatar-white);
+}
+
+[data-md-color-scheme="slate"] .prd-footer {
+  background: var(--qatar-dark-gray);
 }
