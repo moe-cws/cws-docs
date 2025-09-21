@@ -1,0 +1,160 @@
+site_name: Qatar Car Wash Aggregator Platform
+site_description: Product Requirements Document for Qatar's leading car wash service aggregator platform
+site_author: Product Management Team
+site_url: https://yourusername.github.io/cws-docs/
+
+# Repository
+repo_name: yourusername/cws-docs
+repo_url: https://github.com/yourusername/cws-docs
+edit_uri: edit/main/docs/
+
+# Configuration
+theme:
+  name: material
+  language: en
+  direction: ltr
+
+  # Qatar-themed colors (inspired by Qatar flag and business colors)
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - toc.follow
+    - toc.integrate
+
+  icon:
+    logo: material/car-wash
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# Plugins
+plugins:
+  - search:
+      lang: en
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: yourusername
+      repo: cws-docs
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
+  - Product Overview:
+    - Executive Summary: executive-summary.md
+    - Business Objectives: business-objectives.md
+    - Technical Architecture: technical-architecture.md
+  - Development:
+    - Milestones: development-milestones.md
+    - Requirements:
+      - Functional Requirements: functional-requirements.md
+      - Non-Functional Requirements: non-functional-requirements.md
+    - User Stories: user-stories.md
+  - Design & Culture:
+    - UI Design Goals: ui-design-goals.md
+    - Cultural Integration: cultural-integration.md
+  - Operations:
+    - Success Metrics: success-metrics.md
+    - Risk Assessment: risk-assessment.md
+    - Compliance: compliance.md
+  - Contributing:
+    - How to Contribute: contributing.md
+    - Style Guide: style-guide.md
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/cws-docs
+      name: GitHub Repository
+    - icon: fontawesome/solid/envelope
+      link: mailto:team@carwash-qatar.com
+      name: Contact Team
+
+  generator: false
+
+  # Version information
+  version:
+    provider: mike
+    default: latest
+
+# Custom CSS
+extra_css:
+  - stylesheets/extra.css
+
+# Custom JavaScript
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Copyright
+copyright: Copyright &copy; 2025 Qatar Car Wash Aggregator Platform Team

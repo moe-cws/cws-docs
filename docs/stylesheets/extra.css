@@ -1,0 +1,236 @@
+/* Qatar Car Wash Platform Custom Styles */
+
+/* Root variables for Qatar theme */
+:root {
+  --qatar-maroon: #8A1538;
+  --qatar-white: #FFFFFF;
+  --qatar-gold: #FFD700;
+  --qatar-teal: #009688;
+  --qatar-deep-purple: #673AB7;
+  --qatar-light-gray: #F5F5F5;
+  --qatar-dark-gray: #424242;
+}
+
+/* Custom header styling */
+.md-header {
+  background: linear-gradient(135deg, var(--qatar-deep-purple) 0%, var(--qatar-teal) 100%);
+}
+
+/* PRD header styling */
+.prd-header {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 3px solid var(--qatar-teal);
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--qatar-light-gray) 0%, #FAFAFA 100%);
+  border-radius: 8px;
+}
+
+.prd-header h1 {
+  color: var(--qatar-deep-purple);
+  margin-bottom: 0.5rem;
+}
+
+.prd-header h2 {
+  color: var(--qatar-dark-gray);
+  font-weight: 300;
+}
+
+.document-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.document-meta span {
+  background: var(--qatar-teal);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.version {
+  background: var(--qatar-deep-purple) !important;
+}
+
+.status {
+  background: #4CAF50 !important;
+}
+
+/* Table styling for better readability */
+.md-typeset table:not([class]) {
+  border: 2px solid var(--qatar-teal);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--qatar-deep-purple);
+  color: white;
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: rgba(103, 58, 183, 0.05);
+}
+
+/* Mermaid diagram styling */
+.mermaid {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Admonition custom styling */
+.md-typeset .admonition.tip {
+  border-color: var(--qatar-teal);
+}
+
+.md-typeset .admonition.tip > .admonition-title {
+  background-color: var(--qatar-teal);
+}
+
+.md-typeset .admonition.info {
+  border-color: var(--qatar-deep-purple);
+}
+
+.md-typeset .admonition.info > .admonition-title {
+  background-color: var(--qatar-deep-purple);
+}
+
+/* Footer styling */
+.prd-footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 2px solid var(--qatar-teal);
+  background: var(--qatar-light-gray);
+  border-radius: 8px;
+}
+
+.document-info {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.approval-section h3 {
+  color: var(--qatar-deep-purple);
+  border-bottom: 2px solid var(--qatar-teal);
+  padding-bottom: 0.5rem;
+}
+
+.approval-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.approval-item {
+  padding: 1.5rem;
+  border: 2px solid var(--qatar-teal);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.approval-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Navigation enhancements */
+.md-nav__link--active {
+  color: var(--qatar-deep-purple);
+}
+
+/* Code block enhancements */
+.md-typeset .highlight {
+  border-left: 4px solid var(--qatar-teal);
+}
+
+/* Search results styling */
+.md-search-result__meta {
+  color: var(--qatar-deep-purple);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .document-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .approval-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prd-header {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .prd-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .prd-header h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* RTL support for Arabic content */
+[dir="rtl"] .md-typeset {
+  text-align: right;
+}
+
+[dir="rtl"] .document-meta {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .approval-grid {
+  direction: rtl;
+}
+
+/* Print styles */
+@media print {
+  .md-header,
+  .md-sidebar,
+  .md-footer {
+    display: none;
+  }
+
+  .md-main {
+    width: 100% !important;
+  }
+
+  .prd-header {
+    border: 2px solid black;
+    background: white !important;
+  }
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] {
+  --qatar-light-gray: #2E2E2E;
+  --qatar-white: #1E1E1E;
+}
+
+[data-md-color-scheme="slate"] .prd-header {
+  background: linear-gradient(135deg, #2E2E2E 0%, #333333 100%);
+  color: white;
+}
+
+[data-md-color-scheme="slate"] .document-info,
+[data-md-color-scheme="slate"] .approval-item {
+  background: #2E2E2E;
+  border-color: var(--qatar-teal);
+}
