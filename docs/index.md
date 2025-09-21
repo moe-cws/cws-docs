@@ -144,13 +144,17 @@ graph TB
     E --> J
     E --> K
 
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#fff3e0
-    style D fill:#e8f5e8
-    style E fill:#ffebee
-    style F fill:#fce4ec
-    style G fill:#f1f8e9
+    style A fill:#673AB7,stroke:#009688,stroke-width:3px,color:#FFFFFF
+    style B fill:#009688,stroke:#673AB7,stroke-width:3px,color:#FFFFFF
+    style C fill:#4A1458,stroke:#009688,stroke-width:3px,color:#FFFFFF
+    style D fill:#00695C,stroke:#673AB7,stroke-width:3px,color:#FFFFFF
+    style E fill:#8A1538,stroke:#FFD700,stroke-width:3px,color:#FFFFFF
+    style F fill:#1A1A1F,stroke:#009688,stroke-width:3px,color:#FFFFFF
+    style G fill:#2C2C34,stroke:#673AB7,stroke-width:3px,color:#FFFFFF
+    style H fill:#3A3A42,stroke:#FFD700,stroke-width:3px,color:#FFFFFF
+    style I fill:#673AB7,stroke:#FFD700,stroke-width:3px,color:#FFFFFF
+    style J fill:#009688,stroke:#FFD700,stroke-width:3px,color:#FFFFFF
+    style K fill:#4A1458,stroke:#FFD700,stroke-width:3px,color:#FFFFFF
 ```
 
 ### External Integration Requirements
