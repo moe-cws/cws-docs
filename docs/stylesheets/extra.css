@@ -53,20 +53,30 @@
 }
 
 .document-meta span {
-  background: var(--qatar-teal);
-  color: white;
+  background: var(--qatar-dark-gray);
+  color: var(--qatar-white);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
+  border: 2px solid var(--qatar-teal);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .version {
-  background: var(--qatar-deep-purple) !important;
+  background: var(--qatar-accent-dark) !important;
+  border-color: var(--qatar-deep-purple) !important;
 }
 
 .status {
-  background: #4CAF50 !important;
+  background: #2E7D32 !important;
+  border-color: #4CAF50 !important;
+}
+
+.date {
+  background: var(--qatar-teal-dark) !important;
+  border-color: var(--qatar-teal) !important;
 }
 
 /* Table styling for better readability */
@@ -121,26 +131,49 @@
 .mermaid .node circle,
 .mermaid .node ellipse,
 .mermaid .node polygon {
-  fill: var(--qatar-deep-purple);
-  stroke: var(--qatar-teal);
-  stroke-width: 2px;
+  fill: var(--qatar-dark-gray) !important;
+  stroke: var(--qatar-teal) !important;
+  stroke-width: 3px !important;
 }
 
-.mermaid .node .label {
-  color: white;
-  font-weight: 500;
+.mermaid .node .label,
+.mermaid .nodeLabel {
+  color: var(--qatar-white) !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
 }
 
 .mermaid .edgePath .path {
-  stroke: var(--qatar-teal);
-  stroke-width: 2px;
+  stroke: var(--qatar-teal) !important;
+  stroke-width: 3px !important;
 }
 
 .mermaid .edgeLabel {
-  background-color: white;
-  border: 1px solid var(--qatar-teal);
-  border-radius: 4px;
-  padding: 4px 8px;
+  background-color: var(--qatar-dark-gray) !important;
+  color: var(--qatar-white) !important;
+  border: 2px solid var(--qatar-teal) !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-weight: 600 !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+}
+
+/* Subgraph styling for better contrast */
+.mermaid .cluster rect {
+  fill: var(--qatar-medium-gray) !important;
+  stroke: var(--qatar-teal) !important;
+  stroke-width: 2px !important;
+  rx: 8px !important;
+  ry: 8px !important;
+}
+
+.mermaid .cluster .label,
+.mermaid .cluster text {
+  color: var(--qatar-white) !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
 }
 
 /* Admonition custom styling */
@@ -307,4 +340,23 @@
 
 [data-md-color-scheme="slate"] .prd-footer {
   background: var(--qatar-dark-gray);
+}
+
+/* Dark mode specific improvements for badges */
+[data-md-color-scheme="slate"] .document-meta span {
+  background: var(--qatar-light-gray);
+  border-color: var(--qatar-teal);
+  color: var(--qatar-white);
+}
+
+[data-md-color-scheme="slate"] .version {
+  background: var(--qatar-deep-purple) !important;
+}
+
+[data-md-color-scheme="slate"] .status {
+  background: #1B5E20 !important;
+}
+
+[data-md-color-scheme="slate"] .date {
+  background: var(--qatar-teal-dark) !important;
 }

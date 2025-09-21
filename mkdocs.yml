@@ -68,19 +68,23 @@ plugins:
         theme: |
           ^(JSON.parse(__md_get("__palette").index == 1)) ? 'dark' : 'dark'
         themeVariables:
-          primaryColor: '#673AB7'
+          primaryColor: '#1A1A1F'
           primaryTextColor: '#FFFFFF'
           primaryBorderColor: '#009688'
           lineColor: '#009688'
           sectionBkColor: '#1A1A1F'
           altSectionBkColor: '#2C2C34'
           gridColor: '#009688'
-          secondaryColor: '#009688'
-          tertiaryColor: '#FFD700'
+          secondaryColor: '#1A1A1F'
+          tertiaryColor: '#1A1A1F'
           background: '#1A1A1F'
-          mainBkg: '#673AB7'
-          secondBkg: '#009688'
-          tertiaryBkg: '#4A1458'
+          mainBkg: '#1A1A1F'
+          secondBkg: '#1A1A1F'
+          tertiaryBkg: '#1A1A1F'
+          clusterBkg: '#2C2C34'
+          clusterBorder: '#009688'
+          edgeLabelBackground: '#1A1A1F'
+          nodeTextColor: '#FFFFFF'
 
 # Extensions
 markdown_extensions:
