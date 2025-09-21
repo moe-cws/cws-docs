@@ -63,6 +63,20 @@ plugins:
   - git-revision-date-localized:
       type: date
       enable_creation_date: true
+  - mermaid2:
+      arguments:
+        theme: |
+          ^(JSON.parse(__md_get("__palette").index == 1)) ? 'dark' : 'light'
+        themeVariables:
+          primaryColor: '#673AB7'
+          primaryTextColor: '#FFFFFF'
+          primaryBorderColor: '#009688'
+          lineColor: '#009688'
+          sectionBkColor: '#F5F5F5'
+          altSectionBkColor: '#E1F5FE'
+          gridColor: '#CCCCCC'
+          secondaryColor: '#009688'
+          tertiaryColor: '#FFD700'
 
 # Extensions
 markdown_extensions:
@@ -152,6 +166,8 @@ extra_css:
 
 # Custom JavaScript
 extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - javascripts/mermaid.js
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

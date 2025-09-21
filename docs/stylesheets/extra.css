@@ -83,6 +83,51 @@
 .mermaid {
   text-align: center;
   margin: 2rem 0;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 2px solid var(--qatar-teal);
+  overflow-x: auto;
+}
+
+/* Dark mode mermaid adjustments */
+[data-md-color-scheme="slate"] .mermaid {
+  background: #2E2E2E;
+  border-color: var(--qatar-teal);
+}
+
+/* Ensure mermaid diagrams are responsive */
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mermaid diagram text styling */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+  fill: var(--qatar-deep-purple);
+  stroke: var(--qatar-teal);
+  stroke-width: 2px;
+}
+
+.mermaid .node .label {
+  color: white;
+  font-weight: 500;
+}
+
+.mermaid .edgePath .path {
+  stroke: var(--qatar-teal);
+  stroke-width: 2px;
+}
+
+.mermaid .edgeLabel {
+  background-color: white;
+  border: 1px solid var(--qatar-teal);
+  border-radius: 4px;
+  padding: 4px 8px;
 }
 
 /* Admonition custom styling */
